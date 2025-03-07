@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./node_modules/@types", "./src/types/express.d.ts"],
+    "types": ["node"]
+
+  },
+  "include": ["src/**/*", "src/types/express.d.ts", "src/app.ts"],
+  "exclude": ["node_modules"]
+}
