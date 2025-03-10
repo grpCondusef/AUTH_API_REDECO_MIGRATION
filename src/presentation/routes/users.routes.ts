@@ -15,6 +15,6 @@ router.post('/users/create-user/', validarJWT, userExists, createUser);
 router.delete('/users/user/', validarJWT, deleteUSer),
 router.get('/users/token/', updateToken)
 router.post('/users/token/', updateToken)
-
+//PRUEBA DE COMENTARIO PARA JOB JENKINS
 
 export default router
