@@ -14,7 +14,7 @@ type ValidationError = { field: string; message: string };
 export const getTokenFromKeycloak = async (request: Request, response: Response) => {
     const { username, password } = request.body as CreateTokenKeycloakRequestBody;
     const errors: ValidationError[] = [];
-
+    
     // Validaciones iniciales
     validateRequiredField(username, 'username', errors);
     validateRequiredField(password, 'password', errors);
