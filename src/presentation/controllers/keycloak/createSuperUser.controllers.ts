@@ -89,6 +89,7 @@ export const createSuperUser = async (request: Request, response: Response) => {
         }));
 
         const token = tokenResponse.data.access_token;
+        console.log("llegue al token")
 
         // Crear usuario en Keycloak
         const idUserKeycloak = await createUserInKeycloak(
@@ -100,9 +101,12 @@ export const createSuperUser = async (request: Request, response: Response) => {
             institucionid,
             token
         );
+        console.log("cree al usuario")
 
         // Asignar rol al usuario creado
         await assignARoleKC(idUserKeycloak, token);
+
+        console.log("asigne el rol")
 
         // Agregar el usuario en la base de datos
         const newUser = await createUser(
