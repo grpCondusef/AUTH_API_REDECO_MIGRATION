@@ -105,6 +105,7 @@ export const createSuperUser = async (request: Request, response: Response) => {
 
         // Asignar rol al usuario creado
         await assignARoleKC(idUserKeycloak, token);
+        console.log("prueba jenkins")
 
 
 
