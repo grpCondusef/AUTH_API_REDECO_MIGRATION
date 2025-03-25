@@ -52,7 +52,7 @@ export const createSuperUser = async (request: Request, response: Response) => {
 
         const existingKey = await getKeyFromUsedKeys(key);
         if (key && existingKey) {
-            errors.push({ field: 'key', message: `Ya fue creado un súper usuario utilizando esta key.` });
+            errors.push({ field: 'key', message: `Ya fue creado un súper usuario utilizando esta key. cambio jenkins` });
         }
 
         if (errors.length > 0) {
