@@ -55,7 +55,6 @@ export const createSuperUser = async (request: Request, response: Response) => {
             errors.push({ field: 'key', message: `Ya fue creado un súper usuario utilizando esta key.` });
         }
 
-
         if (errors.length > 0) {
             return response.status(400).json({
                 status: "error",
