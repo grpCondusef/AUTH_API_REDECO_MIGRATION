@@ -56,7 +56,6 @@ export const createSuperUser = async (request: Request, response: Response) => {
         }
 
 
-
         if (errors.length > 0) {
             return response.status(400).json({
                 status: "error",
