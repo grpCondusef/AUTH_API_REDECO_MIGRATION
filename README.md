@@ -1,5 +1,1 @@
 # AUTH_API_REDECO_MIGRATION
-
-
-
-
