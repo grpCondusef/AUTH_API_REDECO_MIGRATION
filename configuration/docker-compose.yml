@@ -20,7 +20,7 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     ports:
-      - "81:81"
+      - "83:83"
     depends_on:
       - auth_service
 
