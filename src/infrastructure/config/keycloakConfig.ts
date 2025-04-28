@@ -3,15 +3,26 @@
 
 export const keycloakConfig = {
   clientId: 'api_redeco', // ID del cliente configurado en Keycloak
+  clientSecret: 'eIF6uOw6HdQWAjD1bSNvNYHgecYHMVD0', // Secreto del cliente
+  realm: 'API_REDECO', // Nombre del Realm
+  authServerUrl: 'http://10.33.200.72:8180/realms/API_REDECO/protocol/openid-connect/auth', // URL de autenticación
+  tokenUrl: 'http://10.33.200.72:8180/realms/API_REDECO/protocol/openid-connect/token', // URL para obtener tokens
+  adminUserUrl: 'http://10.33.200.72:8180/admin/realms/API_REDECO/users', // Endpoint de administración de usuarios
+  clientUuid: '1a3b7e4a-a0c5-44bb-9ad5-12887365d19a', // UUID del cliente de Keycloak
+  adminUserId: 'e7039ae7-37d1-48fd-bb0c-c4c881b88191', // ID de usuario admin  
+};
+/*
+export const keycloakConfig = {
+  clientId: 'api_redeco', // ID del cliente configurado en Keycloak
   clientSecret: 'IZs14vBdnz5Pcjj0WCCxGzNjwPyi4y4s', // Secreto del cliente
   realm: 'API_REDECO', // Nombre del Realm
-  authServerUrl: 'http://10.33.200.72:8190/realms/API_REDECO/protocol/openid-connect/auth', // URL de autenticación
-  tokenUrl: 'http://10.33.200.72:8190/realms/API_REDECO/protocol/openid-connect/token', // URL para obtener tokens
-  adminUserUrl: 'http://10.33.200.72:8190/admin/realms/API_REDECO/users', // Endpoint de administración de usuarios
+  authServerUrl: 'http://10.33.200.72:8180/realms/API_REDECO/protocol/openid-connect/auth', // URL de autenticación
+  tokenUrl: 'http://10.33.200.72:8180/realms/API_REDECO/protocol/openid-connect/token', // URL para obtener tokens
+  adminUserUrl: 'http://10.33.200.72:8180/admin/realms/API_REDECO/users', // Endpoint de administración de usuarios
   clientUuid: 'b7687aaf-c575-432f-83da-17613490feb8', // UUID del cliente de Keycloak
   adminUserId: 'e7039ae7-37d1-48fd-bb0c-c4c881b88191', // ID de usuario admin  
 };
-
+*/
 //REINO CON ABRAHAM
 /*export const keycloakConfig = {
   clientId: 'api-redeco', // ID del cliente configurado en Keycloak

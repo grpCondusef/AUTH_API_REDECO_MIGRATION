@@ -55,6 +55,7 @@ export const createSuperUser = async (request: Request, response: Response) => {
             errors.push({ field: 'key', message: `Ya fue creado un súper usuario utilizando esta key.` });
         }
 
+
         if (errors.length > 0) {
             return response.status(400).json({
                 status: "error",
@@ -90,6 +91,7 @@ export const createSuperUser = async (request: Request, response: Response) => {
 
         const token = tokenResponse.data.access_token;
 
+
         // Crear usuario en Keycloak
         const idUserKeycloak = await createUserInKeycloak(
             keycloakConfig.adminUserUrl,
@@ -101,8 +103,12 @@ export const createSuperUser = async (request: Request, response: Response) => {
             token
         );
 
+
         // Asignar rol al usuario creado
         await assignARoleKC(idUserKeycloak, token);
+        console.log("prueba jenkins")
+
+
 
         // Agregar el usuario en la base de datos
         const newUser = await createUser(
@@ -138,3 +144,7 @@ export const createSuperUser = async (request: Request, response: Response) => {
         });
     }
 };
+
+
+
+

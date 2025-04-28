@@ -6,15 +6,16 @@ export const assignARoleKC = async (
 ): Promise<void> => {
     try {
         await axios.post(
-            `http://10.33.21.86:8090/admin/realms/API_REDECO/users/${idUserKeycloak}/role-mappings/clients/673b301d-72cd-4025-abfa-c24992ebeba5`,
+            `http://10.33.200.72:8180/admin/realms/API_REDECO/users/${idUserKeycloak}/role-mappings/clients/1a3b7e4a-a0c5-44bb-9ad5-12887365d19a`,
             [
                 {
-                    id: "38e000ef-24c6-483e-9314-cfbbba06796a",
-                    name: "super_user_role",
-                    composite: false,
-                    clientRole: true,
-                    containerId: "673b301d-72cd-4025-abfa-c24992ebeba5",
-                },
+                    "id": "92f33122-9ee3-4205-82b9-c1aca5774a45",
+                    "name": "superUser",
+                    "description": "",
+                    "composite": false,
+                    "clientRole": true,
+                    "containerId": "1a3b7e4a-a0c5-44bb-9ad5-12887365d19a"
+                }
             ],
             {
                 headers: {

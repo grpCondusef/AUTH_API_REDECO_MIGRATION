@@ -10,9 +10,10 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "typeRoots": ["./node_modules/@types", "./src/types/express.d.ts"],
-    "types": ["node"]
+    "types": ["node", "jest"],
+    
 
   },
-  "include": ["src/**/*", "src/types/express.d.ts", "src/app.ts"],
+  "include": ["src/**/*", "src/types/express.d.ts", "src/app.ts", "tests"],
   "exclude": ["node_modules"]
 }

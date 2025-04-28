@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "redeco_api_migration",
   "description": "Proyecto de Desarrollo para la migración de la API REDECO de JavaScript a TypeScript",
@@ -40,3 +41,52 @@
     "uuid": "^11.0.5"
   }
 }
+=======
+{
+  "name": "redeco_api_migration",
+  "description": "Proyecto de Desarrollo para la migración de la API REDECO de JavaScript a TypeScript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Adair Peña Pescador",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.3",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.10.5",
+    "@types/pg": "^8.11.10",
+    "@types/supertest": "^6.0.3",
+    "@types/uuid": "^10.0.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.1.0",
+    "ts-jest": "^29.3.2",
+    "ts-node": "^10.9.2",
+    "tslint": "^5.12.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "keycloak-connect": "^26.1.1",
+    "pg": "^8.13.1",
+    "pg-pool": "^3.7.0",
+    "undici": "^7.2.0",
+    "uuid": "^11.0.5"
+  }
+}
+>>>>>>> dba13341f6d294238d07c1da14d2ab8bccfcaab4
