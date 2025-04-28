@@ -7,7 +7,7 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "jest"
   },
   "keywords": [],
   "author": "Adair Peña Pescador",
