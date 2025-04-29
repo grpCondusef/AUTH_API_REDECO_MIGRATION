@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   auth_service:
     container_name: auth_service
@@ -6,13 +7,15 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000" # Mapea el puerto 3000 del contenedor al 3000 del host
+      - "3000:3000"
     volumes:
       - .:/app
-      - /app/node_modules # Ignora los node_modules locales
-    command: npm run dev # Ejecuta el servidor en modo desarrollo
+      - /app/node_modules
+    command: npm run dev
     environment:
       - NODE_ENV=development
+    networks:
+      - monitoring-net
 
   nginx:
     container_name: nginx-container
@@ -23,6 +26,8 @@ services:
       - "91:91"
     depends_on:
       - auth_service
+    networks:
+      - monitoring-net
 
   db:
     image: postgres:15.2-alpine3.17
@@ -35,6 +40,12 @@ services:
       - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    networks:
+      - monitoring-net
+
+networks:
+  monitoring-net:
+    external: true
 
 volumes:
   pgdata:
